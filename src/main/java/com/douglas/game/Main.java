@@ -1,6 +1,7 @@
 package com.douglas.game;
 
 import org.glassfish.grizzly.http.server.HttpServer;
+import org.glassfish.grizzly.http.server.NetworkListener;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -29,7 +30,15 @@ public class Main {
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+
+        // expose static content
         server.getServerConfiguration().addHttpHandler(new StaticHttpHandler(ANGULAR_ROOT));
+
+        // prevent locking of static content files, so that changes to it can be done while server is running
+        // this is convenient for development, but likely should be disabled for production
+        for (NetworkListener l : server.getListeners()) {
+            l.getFileCache().setEnabled(false);
+        }
         return server;
     }
 
