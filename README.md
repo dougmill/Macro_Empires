@@ -14,3 +14,4 @@ Configure Project Defaults, Project Structure, Platform Settings, SDKs, click gr
 New project, Check out from Version Control, Checkout from GitHub, Vcs Repository URL is https://github.com/dougmill/Macro_Empires.git
 Open the Maven Projects tab and Reimport until dependencies are resolved and Main.java has no errors
 Build and run
+visit http://localhost:8080/ to see main page
