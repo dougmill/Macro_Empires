@@ -2,6 +2,8 @@ Macro_Empires
 =============
 Build instructions:
 Install Git (I'm on version 1.9.4, not sure if "Use Git from the Windows Command Prompt" option is needed)
+git config --global user.email "your@email"
+git config --global user.name "your name"
 Install JDK (version 1.8.0_05)
 Install Maven (version 3.3.2)
 Configure environment variables as specified in Maven install instructions
