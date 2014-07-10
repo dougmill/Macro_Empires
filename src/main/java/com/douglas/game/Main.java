@@ -5,6 +5,12 @@ import org.glassfish.grizzly.http.server.NetworkListener;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -14,6 +20,25 @@ import java.net.URI;
  *
  */
 public class Main {
+    private static final SessionFactory ourSessionFactory;
+    private static final ServiceRegistry serviceRegistry;
+
+    static {
+        try {
+            Configuration configuration = new Configuration();
+            configuration.configure();
+
+            serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
+            ourSessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static Session getSession() throws HibernateException {
+        return ourSessionFactory.openSession();
+    }
+
     // Base URI the Grizzly HTTP server will listen on
     public static final String BASE_URI = "http://localhost:8080/myapp/";
     public static final String ANGULAR_ROOT = "src\\main\\Angular";

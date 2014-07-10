@@ -9,6 +9,7 @@ Install Maven (version 3.3.2)
 Configure environment variables as specified in Maven install instructions
 download angularjs (version 1.2.18, just save the file somewhere)
 Install IntelliJ (version 13.1.3)
+Install MySQL (details of this need to be worked out)
 
 In IntelliJ
 Configure plugins, click Install JetBrains plugin, select and install AngularJS plugin
