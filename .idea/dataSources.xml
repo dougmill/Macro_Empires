@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="707546708">
-    <data-source source="LOCAL" name="MySQL - macro_empires@localhost" uuid="a0731268-d8dc-4e70-9428-848457cb18be">
-      <driver-ref>mysql</driver-ref>
+  <component name="DataSourceManagerImpl" format="xml" hash="2203580766">
+    <data-source source="LOCAL" name="H2 - Macro_Empires" uuid="d6c8f7bb-607d-4560-8e81-f899ca2f5aac">
+      <driver-ref>h2.embedded</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/macro_empires</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfd8dfdbdfdedf99dfcbdfccdfd2dfd3</user-password>
-      <schema-pattern>macro_empires.*</schema-pattern>
-      <default-schemas>macro_empires.*</default-schemas>
-      <driver-properties>
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-      </driver-properties>
-      <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="src:main:resources:hibernate.cfg.xml" uuid="96bb1783-4952-42a6-9a2c-ea37eed4aef6">
-      <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/macro_empires</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfd8dfdbdfdedf99dfcbdfccdfd2dfd3</user-password>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:$PROJECT_DIR$/src/main/resources/Macro_Empires</jdbc-url>
+      <schema-pattern>MACRO_EMPIRES.PUBLIC</schema-pattern>
+      <default-schemas>MACRO_EMPIRES.PUBLIC</default-schemas>
       <libraries />
     </data-source>
   </component>
