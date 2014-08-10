@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="H2 - Macro_Empires" uuid="d6c8f7bb-607d-4560-8e81-f899ca2f5aac">
+    <database-info product="H2" version="1.3.175 (2014-01-18)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.175 (2014-01-18)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="MACRO_EMPIRES"/>
+    <table name="SYSTEMS" schema="PUBLIC" catalog="MACRO_EMPIRES" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRkI5RDI5OTBfOEZFQV80QTExXzlENzlfQjdGMzE0MDc5NTlGKQ==" autoIncrement="true"/>
+      <column name="X_COORD" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Y_COORD" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_C" columns="ID"/>
+    </table>
+  </data-source>
+</component>
