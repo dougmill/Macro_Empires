@@ -15,8 +15,18 @@ Configure plugins, click Install JetBrains plugin, select and install AngularJS 
 Configure Project Defaults, Project Structure, Platform Settings, SDKs, click green plus button to add new SDK and pick JDK for the type, select JDK install folder
 Configure Project Defaults, Project Structure, Global Libraries, click green plus button to add new library and pick JavaScript for the type, select angular.js file, leave library named angular
 New project, Check out from Version Control, Checkout from GitHub, Vcs Repository URL is https://github.com/dougmill/Macro_Empires.git
-Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in Main.java (this will require multiple prompted restarts)
+Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in Main.java (this will require prompted reload(s))
 Open Main.java and run it.
-Edit src/main/java/resource/hibernate.cfg.xml to change database file location
 visit http://localhost:8080/ to see main page
 visit http://localhost:8080/myapp/myresource to see demo api call return value
+
+If you want to use the database SQL console:
+Open Database tab
+Right-click on H2 - Macro Empires
+Select Data Source Properties
+See the "Driver files missing" notice at the bottom and click the link to download.
+
+If you want to use the Hibernate console:
+Build the project to resolve any class mappings.
+Edit the "hibernate.connection.url" property in hibernate.cfg.xml.
+Reloading the project may be required.
