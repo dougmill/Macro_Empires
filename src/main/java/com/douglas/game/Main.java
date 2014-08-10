@@ -1,5 +1,6 @@
 package com.douglas.game;
 
+import com.douglas.game.database.*;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.NetworkListener;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
@@ -13,6 +14,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.io.IOException;
+import java.lang.System;
 import java.net.URI;
 
 /**
@@ -27,6 +29,7 @@ public class Main {
         try {
             Configuration configuration = new Configuration();
             configuration.configure();
+            configuration.setProperty("hibernate.connection.url", "jdbc:h2:file:" + System.getProperty("user.dir") + "/src/main/resources/Macro_Empires");
 
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             ourSessionFactory = configuration.buildSessionFactory(serviceRegistry);

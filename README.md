@@ -17,4 +17,6 @@ Configure Project Defaults, Project Structure, Global Libraries, click green plu
 New project, Check out from Version Control, Checkout from GitHub, Vcs Repository URL is https://github.com/dougmill/Macro_Empires.git
 Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in Main.java (this will require multiple prompted restarts)
 Open Main.java and run it.
+Edit src/main/java/resource/hibernate.cfg.xml to change database file location
 visit http://localhost:8080/ to see main page
+visit http://localhost:8080/myapp/myresource to see demo api call return value
