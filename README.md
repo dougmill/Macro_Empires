@@ -15,7 +15,7 @@ Configure plugins, click Install JetBrains plugin, select and install AngularJS 
 Configure Project Defaults, Project Structure, Platform Settings, SDKs, click green plus button to add new SDK and pick JDK for the type, select JDK install folder
 Configure Project Defaults, Project Structure, Global Libraries, click green plus button to add new library and pick JavaScript for the type, select angular.js file, leave library named angular
 New project, Check out from Version Control, Checkout from GitHub, Vcs Repository URL is https://github.com/dougmill/Macro_Empires.git
-Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in Main.java (this will require prompted reload(s))
+Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in GameServer.java (this will require prompted reload(s))
 Open Main.java and run it.
 visit http://localhost:8080/ to see main page
 visit http://localhost:8080/api/systems to see demo api call return value
