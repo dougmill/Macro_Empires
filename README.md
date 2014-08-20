@@ -18,7 +18,7 @@ New project, Check out from Version Control, Checkout from GitHub, Vcs Repositor
 Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in Main.java (this will require prompted reload(s))
 Open Main.java and run it.
 visit http://localhost:8080/ to see main page
-visit http://localhost:8080/myapp/myresource to see demo api call return value
+visit http://localhost:8080/api/systems to see demo api call return value
 
 If you want to use the database SQL console:
 Open Database tab

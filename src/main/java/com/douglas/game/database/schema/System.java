@@ -1,11 +1,11 @@
-package com.douglas.game.database;
+package com.douglas.game.database.schema;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
 /**
- * Created by Douglas on 7/6/2014.
+ * Represents a star system on the galactic map.
  */
 @Entity ( name = "Systems" )
 public class System {
