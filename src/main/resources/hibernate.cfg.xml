@@ -17,7 +17,7 @@
         <property name="hibernate.id.new_generator_mappings">true</property>
         <property name="hibernate.jdbc.batch_versioned_data">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.douglas.game.database.schema.System"/>
+        <mapping class="com.douglas.game.database.schema.StarSystem"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>

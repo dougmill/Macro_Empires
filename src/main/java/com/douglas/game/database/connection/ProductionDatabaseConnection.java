@@ -11,7 +11,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
  * Opens the production database file and provides sessions connected to it.
  */
 @Singleton
-public class ProductionDatabaseConnection implements DatabaseConnection {
+class ProductionDatabaseConnection implements DatabaseConnection {
     private final SessionFactory sessionFactory;
 
     public ProductionDatabaseConnection() {

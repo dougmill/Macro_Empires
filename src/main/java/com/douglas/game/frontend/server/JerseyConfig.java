@@ -15,7 +15,7 @@ public class JerseyConfig extends ResourceConfig {
     @Inject
     public JerseyConfig(ServiceLocator serviceLocator) {
         // Find all api endpoints.
-        packages("com.douglas.game.frontend");
+        packages("com.douglas.game.frontend.api");
 
         // Let Jersey and Guice dependency injection talk to each other.
         // Note that even with this Jersey will only use Guice for classes Jersey has no knowledge of.

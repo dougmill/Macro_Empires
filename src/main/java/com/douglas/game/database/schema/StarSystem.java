@@ -7,8 +7,8 @@ import javax.persistence.*;
 /**
  * Represents a star system on the galactic map.
  */
-@Entity ( name = "Systems" )
-public class System {
+@Entity ( name = "Star_Systems" )
+public class StarSystem {
     private int id;
     private int xCoord;
     private int yCoord;
@@ -50,11 +50,11 @@ public class System {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        System system = (System) o;
+        StarSystem starSystem = (StarSystem) o;
 
-        if (id != system.id) return false;
-        if (xCoord != system.xCoord) return false;
-        if (yCoord != system.yCoord) return false;
+        if (id != starSystem.id) return false;
+        if (xCoord != starSystem.xCoord) return false;
+        if (yCoord != starSystem.yCoord) return false;
 
         return true;
     }

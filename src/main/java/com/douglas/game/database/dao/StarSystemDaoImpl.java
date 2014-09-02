@@ -1,7 +1,7 @@
 package com.douglas.game.database.dao;
 
 import com.douglas.game.database.connection.DatabaseConnection;
-import com.douglas.game.database.schema.System;
+import com.douglas.game.database.schema.StarSystem;
 import com.douglas.game.database.transaction.SubTransactional;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -15,18 +15,22 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Data access for System objects.
  */
 @Singleton
-public class SystemDao {
+class StarSystemDaoImpl implements StarSystemDao {
     private DatabaseConnection databaseConnection;
 
     @Inject
-    public SystemDao(DatabaseConnection databaseConnection) {
+    public StarSystemDaoImpl(DatabaseConnection databaseConnection) {
         this.databaseConnection = checkNotNull(databaseConnection);
     }
 
     @SubTransactional
-    public List<System> getAllSystems() {
+    @Override
+    public List<StarSystem> getAllSystems() {
         Session session = databaseConnection.getSession();
-        List result = session.createQuery("from Systems").list();
-        return (List<System>)result;
+
+        // Hibernate will always return only StarSystem objects from this query.
+        @SuppressWarnings("unchecked")
+        List<StarSystem> result = (List<StarSystem>)session.createQuery("from Star_Systems").list();
+        return result;
     }
 }

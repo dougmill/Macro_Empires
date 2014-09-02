@@ -13,7 +13,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * called.
  */
 @Singleton
-public class TransactionIsOpenChecker implements MethodInterceptor {
+class TransactionIsOpenChecker implements MethodInterceptor {
     private DatabaseConnection databaseConnection;
 
     @Inject

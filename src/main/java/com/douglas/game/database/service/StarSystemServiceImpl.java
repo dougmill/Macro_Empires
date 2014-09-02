@@ -1,7 +1,7 @@
 package com.douglas.game.database.service;
 
-import com.douglas.game.database.dao.SystemDao;
-import com.douglas.game.database.schema.System;
+import com.douglas.game.database.dao.StarSystemDao;
+import com.douglas.game.database.schema.StarSystem;
 import com.douglas.game.database.transaction.Transactional;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -14,19 +14,19 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Retrieves information on Systems.
  */
 @Singleton
-public class SystemService {
-    private SystemDao systemDao;
+class StarSystemServiceImpl implements StarSystemService {
+    private StarSystemDao starSystemDao;
 
     @Inject
-    public SystemService(SystemDao systemDao) {
-        this.systemDao = checkNotNull(systemDao);
+    public StarSystemServiceImpl(StarSystemDao starSystemDao) {
+        this.starSystemDao = checkNotNull(starSystemDao);
     }
 
     /**
      * Gets the list of every System in the database.
      */
     @Transactional
-    public List<System> getAllSystems() {
-        return systemDao.getAllSystems();
+    public List<StarSystem> getAllSystems() {
+        return starSystemDao.getAllSystems();
     }
 }

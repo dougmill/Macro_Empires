@@ -1,7 +1,7 @@
 package com.douglas.game.frontend.api;
 
-import com.douglas.game.database.schema.System;
-import com.douglas.game.database.service.SystemService;
+import com.douglas.game.database.schema.StarSystem;
+import com.douglas.game.database.service.StarSystemService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -15,13 +15,13 @@ import static com.google.common.base.Preconditions.checkNotNull;
 /**
  * API point for requesting information on Systems.
  */
-@Path("systems")
-public class Systems {
-    private SystemService systemService;
+@Path("starsystems")
+public class StarSystems {
+    private StarSystemService starSystemService;
 
     @Inject
-    public Systems(SystemService systemService) {
-        this.systemService = checkNotNull(systemService);
+    public StarSystems(StarSystemService starSystemService) {
+        this.starSystemService = checkNotNull(starSystemService);
     }
 
     /**
@@ -29,7 +29,7 @@ public class Systems {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<System> getAllSystems() {
-        return systemService.getAllSystems();
+    public List<StarSystem> getAllSystems() {
+        return starSystemService.getAllSystems();
     }
 }

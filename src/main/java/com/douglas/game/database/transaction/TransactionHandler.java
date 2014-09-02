@@ -14,7 +14,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Method interceptor for {@link Transactional} methods that opens and closes a transaction for them.
  */
 @Singleton
-public class TransactionHandler implements MethodInterceptor {
+class TransactionHandler implements MethodInterceptor {
     private DatabaseConnection databaseConnection;
 
     @Inject
