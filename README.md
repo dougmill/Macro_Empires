@@ -9,13 +9,19 @@ Install Maven (I'm on version 3.2.2)
 Configure environment variables as specified in Maven install instructions
 download angularjs (I'm on version 1.2.18, just save the file somewhere)
 Install IntelliJ (I'm on version 13.1.3, I do not have a precise list of which packages/plugins are required)
+Create account on github.com.
+Create account on gerrithub.io and link it to github.
+Tell me your gerrithub/github username or email so I can add you to the reviewers list.
+On gerrithub, go to your settings and generate an http password.
+On gerrithub, go to your settings and add "dougmill/Macro_Empires" to your watched projects, and consider checking the notification checkboxes.
 
 In IntelliJ
 Configure plugins, click Install JetBrains plugin, select and install AngularJS plugin
+Configure plugins, click Browse repositories, select and install Gerrit
 Configure Project Defaults, Project Structure, Platform Settings, SDKs, click green plus button to add new SDK and pick JDK for the type, select JDK install folder
 Configure Project Defaults, Project Structure, Global Libraries, click green plus button to add new library and pick JavaScript for the type, select angular.js file, leave library named angular
-Check out project from Version Control, Checkout from GitHub, Vcs Repository URL is https://github.com/dougmill/Macro_Empires.git
-Open the Maven Projects tab and Reimport until dependencies are resolved and there are no errors, in Maven or in GameServer.java (this will require prompted reload(s))
+Check out project from Version Control, Checkout from Gerrit, login URL is https://review.gerrithub.io, username is your gerrithub username, and password is your generated gerrithub http password, Vcs Repository URL is https://review.gerrithub.io/dougmill/Macro_Empires
+Open the project, and on the green maven popup click to import changes.
 Open Main.java and run it.
 visit http://localhost:8080/ to see main page
 visit http://localhost:8080/api/starsystems to see demo api call return value

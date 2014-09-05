@@ -26,6 +26,7 @@ class StarSystemServiceImpl implements StarSystemService {
      * Gets the list of every System in the database.
      */
     @Transactional
+    @Override
     public List<StarSystem> getAllSystems() {
         return starSystemDao.getAllSystems();
     }
